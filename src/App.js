@@ -8,7 +8,7 @@ import './layout/config/_base.sass';
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className="app">
         <Nav />
         <Hero />
       </div>

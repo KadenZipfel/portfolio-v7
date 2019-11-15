@@ -4,3 +4,24 @@
 body
   font-family: Roboto, sans-serif
   margin: 0
+
+#root
+  width: 100vh
+  height: 100vw
+  transform: rotate(-90deg) translateX(-100vh)
+  transform-origin: top left
+  overflow-y: scroll
+  overflow-x: hidden
+  position: absolute
+  scrollbar-width: none
+  -ms-overflow-style: none
+
+::-webkit-scrollbar
+  display: none
+
+.app
+  transform: rotate(90deg) translateY(-100vh)
+  transform-origin: top left
+  display: flex
+  flex-direction: row
+  width: 100vw
