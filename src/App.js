@@ -16,7 +16,7 @@ class App extends Component {
             <Hero />
             <Project 
               header="Defi Accelerator"
-              description="A marketing page for an Ethereum application." 
+              description="Marketing page for an Ethereum application." 
             />
           </div>
         </div>

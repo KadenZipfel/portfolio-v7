@@ -12,6 +12,9 @@ class Project extends Component {
         <p className="project__description">
           {this.props.description}
         </p>
+        {/* Change this to an image */}
+        <div className="project__image"></div>
+        <div className="project__image-background"></div>
       </section>
     );
   }
