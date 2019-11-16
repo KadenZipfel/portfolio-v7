@@ -18,6 +18,14 @@ class App extends Component {
               header="Defi Accelerator"
               description="Marketing page for an Ethereum application." 
             />
+            <Project 
+              header="Compound Data"
+              description="Displays API data from Compound.finance." 
+            />
+            <Project 
+              header="CSS Bundle"
+              description="A package for custom modular css components." 
+            />
           </div>
         </div>
       </div>
