@@ -10,7 +10,7 @@ class Hero extends Component {
           Hi, I'm Kaden.
         </h1>
         <p className="hero__scroll">
-          Scroll down to see some of my work.
+          Scroll to see some of my work.
         </p>
       </section>
     );

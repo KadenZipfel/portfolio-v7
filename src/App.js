@@ -2,15 +2,24 @@ import React, {Component} from 'react';
 
 import Hero from './components/Hero';
 import Nav from './components/Nav';
+import Project from './components/Project';
 
 import './layout/config/_base.sass';
 
 class App extends Component {
   render() {
     return (
-      <div className="app">
+      <div>
         <Nav />
-        <Hero />
+        <div className="outer-wrapper">
+          <div className="inner-wrapper">
+            <Hero />
+            <Project 
+              header="Defi Accelerator"
+              description="A marketing page for an Ethereum application." 
+            />
+          </div>
+        </div>
       </div>
     );
   }

@@ -5,7 +5,7 @@ body
   font-family: Roboto, sans-serif
   margin: 0
 
-#root
+.outer-wrapper
   width: 100vh
   height: 100vw
   transform: rotate(-90deg) translateX(-100vh)
@@ -19,9 +19,9 @@ body
 ::-webkit-scrollbar
   display: none
 
-.app
+.inner-wrapper
   transform: rotate(90deg) translateY(-100vh)
   transform-origin: top left
   display: flex
   flex-direction: row
-  width: 100vw
+  width: 200vw
