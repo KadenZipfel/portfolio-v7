@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 
-import Hero from './components/Hero';
 import Nav from './components/Nav';
+import Hero from './components/Hero';
 import Project from './components/Project';
+import About from './components/About';
 
 import './layout/config/_base.sass';
 
@@ -26,6 +27,7 @@ class App extends Component {
               header="CSS Bundle"
               description="A package for custom modular css components." 
             />
+            <About />
           </div>
         </div>
       </div>
