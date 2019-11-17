@@ -1,4 +1,9 @@
-$project-padding: 169px
+@import '../config/_breakpoints'
+
+$project-padding: 320px
+
++media($breakpoint-xxl)
+  $project-padding: 169px
 
 .project
   height: 100vh
