@@ -41,6 +41,7 @@ class App extends Component {
   fadeInElements = () => {
     const wrapper = document.querySelector('.outer-wrapper');
 
+    // Get project elements
     const headers = Array.from(document.querySelectorAll('.project__heading'));
     const images = Array.from(document.querySelectorAll('.project__image'));
     const imageBackgrounds = 
@@ -48,6 +49,7 @@ class App extends Component {
 
     const projectElements = headers.concat(images, imageBackgrounds);
 
+    // Get about elements
     const text = document.querySelector('.about__text');
     const image = document.querySelector('.about__image');
     const imageBackground = 
@@ -55,12 +57,14 @@ class App extends Component {
 
     const aboutElements = [text, image, imageBackground];
 
+    // Concatenate elements
     const elements = projectElements.concat(aboutElements);
 
-    wrapper.onscroll = () => {
-      const width = window.innerWidth;
-      const range = (width / 4) * 3;
+    const width = window.innerWidth;
+    const range = (width / 4) * 3;
 
+    wrapper.onscroll = () => {
+      // Fade in elements when in range
       elements.forEach((element) => {
         const left = element.getBoundingClientRect().left;
         if(left < range) {
