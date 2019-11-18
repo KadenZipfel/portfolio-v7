@@ -18,7 +18,7 @@ class Nav extends Component {
       navMenu.classList.add('active');
     }
   }
-
+  
   toggleExpandedNav = () => {
     const expandedNav = document.querySelector('.expanded-nav');
 

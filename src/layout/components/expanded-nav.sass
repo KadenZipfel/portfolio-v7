@@ -1,3 +1,5 @@
+@import '../config/_animations'
+  
 .expanded-nav
   position: absolute
   height: 100vh
@@ -5,6 +7,7 @@
   display: flex
   align-items: center
   justify-content: center
+  overflow: hidden 
 
 .expanded-nav__background
   position: absolute
@@ -15,13 +18,25 @@
   height: 1px
   width: 1px
   border-radius: 50%
-  transition: height 0.3s, width 0.3s
+  transition: height 0.5s, width 0.5s
   z-index: 2
 
 .expanded-nav.active
   .expanded-nav__background
     height: 6000px
     width: 6000px
+  .expanded-nav__link
+    visibility: visible
+  .expanded-nav__link:nth-of-type(1)
+    animation: 0.3s fadeRight forwards 0.2s
+  .expanded-nav__link:nth-of-type(2)
+    animation: 0.3s fadeRight forwards 0.4s
+  .expanded-nav__link:nth-of-type(3)
+    animation: 0.3s fadeRight forwards 0.6s
+  .expanded-nav__link:nth-of-type(4)
+    animation: 0.3s fadeRight forwards 0.8s
+  .expanded-nav__link:nth-of-type(5)
+    animation: 0.3s fadeRight forwards 1s
 
 .expanded-nav__links
   z-index: 3
@@ -41,6 +56,8 @@
   margin: 8px
   cursor: pointer
   transition: 0.3s background, 0.3s color
+  opacity: 0
+  visibility: hidden
 
 .expanded-nav__link:hover
   color: #2b2b2b

@@ -23,7 +23,7 @@
   height: 1px
   background: #000000
   position: absolute
-  transition: 0.3s transform, 0.3s background
+  transition: 0.5s transform, 0.5s background
 
 .nav__bar--1
   top: 0
@@ -54,3 +54,9 @@
   
   .nav__bar--3
     transform: rotate(-45deg) scaleX(1.4)
+
+.nav__menu:hover:not(.active)
+  .nav__bar--1
+    transform: translateX(8px)
+  .nav__bar--3
+    transform: translateX(-8px)
