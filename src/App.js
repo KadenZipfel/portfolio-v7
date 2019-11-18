@@ -9,6 +9,10 @@ import About from './components/About';
 import './layout/config/_base.sass';
 
 class App extends Component {
+  componentDidMount = () => {
+    this.fadeInElements();
+  }
+
   handleNavClick = () => {
     this.toggleNavMenu();
     this.toggleExpandedNav();
@@ -31,6 +35,38 @@ class App extends Component {
       expandedNav.classList.remove('active');
     } else {
       expandedNav.classList.add('active');
+    }
+  }
+
+  fadeInElements = () => {
+    const wrapper = document.querySelector('.outer-wrapper');
+
+    const headers = Array.from(document.querySelectorAll('.project__heading'));
+    const images = Array.from(document.querySelectorAll('.project__image'));
+    const imageBackgrounds = 
+      Array.from(document.querySelectorAll('.project__image-background'));
+
+    const projectElements = headers.concat(images, imageBackgrounds);
+
+    const text = document.querySelector('.about__text');
+    const image = document.querySelector('.about__image');
+    const imageBackground = 
+      document.querySelector('.about__image-background');
+
+    const aboutElements = [text, image, imageBackground];
+
+    const elements = projectElements.concat(aboutElements);
+
+    wrapper.onscroll = () => {
+      const width = window.innerWidth;
+      const range = (width / 4) * 3;
+
+      elements.forEach((element) => {
+        const left = element.getBoundingClientRect().left;
+        if(left < range) {
+          element.classList.add('active')
+        }
+      });
     }
   }
 
