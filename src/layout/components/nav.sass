@@ -23,7 +23,7 @@
   height: 1px
   background: #000000
   position: absolute
-  transition: 0.3s transform
+  transition: 0.3s transform, 0.3s background
 
 .nav__bar--1
   top: 0
@@ -43,9 +43,14 @@
   transform-origin: bottom left
 
 .nav__menu.active
+  .nav__bar
+    background: white
+
   .nav__bar--1
     transform: rotate(-45deg) scaleX(1.4)
+  
   .nav__bar--2
     transform: rotate(45deg) scaleX(1.4)
+  
   .nav__bar--3
     transform: rotate(-45deg) scaleX(1.4)

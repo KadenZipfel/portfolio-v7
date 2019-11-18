@@ -6,6 +6,7 @@ import github from '../images/github.png';
 class Nav extends Component {
   handleClick = () => {
     this.toggleMenu();
+    this.toggleExpandedNav();
   }
 
   toggleMenu = () => {
@@ -15,6 +16,16 @@ class Nav extends Component {
       navMenu.classList.remove('active');
     } else {
       navMenu.classList.add('active');
+    }
+  }
+
+  toggleExpandedNav = () => {
+    const expandedNav = document.querySelector('.expanded-nav');
+
+    if(expandedNav.classList.contains('active')) {
+      expandedNav.classList.remove('active');
+    } else {
+      expandedNav.classList.add('active');
     }
   }
 

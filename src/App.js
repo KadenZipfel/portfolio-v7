@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 
 import Nav from './components/Nav';
+import ExpandedNav from './components/ExpandedNav';
 import Hero from './components/Hero';
 import Project from './components/Project';
 import About from './components/About';
@@ -12,6 +13,7 @@ class App extends Component {
     return (
       <div>
         <Nav />
+        <ExpandedNav />
         <div className="outer-wrapper">
           <div className="inner-wrapper">
             <Hero />

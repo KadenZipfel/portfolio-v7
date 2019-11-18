@@ -1,0 +1,18 @@
+.expanded-nav
+  position: relative
+
+.expanded-nav__background
+  position: absolute
+  top: 0
+  right: 0
+  background: #2b2b2b
+  transform: translate(50%, -50%)
+  height: 1px
+  width: 1px
+  border-radius: 50%
+  transition: height 0.3s, width 0.3s
+
+.expanded-nav.active
+  .expanded-nav__background
+    height: 6000px
+    width: 6000px
