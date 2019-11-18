@@ -5,7 +5,7 @@ import '../layout/components/about.sass';
 class About extends Component {
   render() {
     return (
-      <section className="about">
+      <section className="about" id="about">
         {/* Change this to an image */}
         <div className="about__image"></div>
         <div className="about__image-background"></div>

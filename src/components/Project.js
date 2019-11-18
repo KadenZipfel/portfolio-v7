@@ -5,7 +5,7 @@ import '../layout/components/project.sass';
 class Project extends Component {
   render() {
     return (
-      <section className="project">
+      <section className="project" id={this.props.id}>
         <h2 className="project__header">
           {this.props.header}
         </h2>

@@ -5,7 +5,7 @@ import '../layout/components/hero.sass';
 class Hero extends Component {
   render() {
     return (
-      <section className="hero">
+      <section className="hero" id="home">
         <h1 className="hero__header">
           Hi, I'm Kaden.
         </h1>
