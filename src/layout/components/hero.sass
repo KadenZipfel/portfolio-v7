@@ -1,4 +1,5 @@
 @import '../config/_animations'
+@import '../config/_breakpoints'
   
 .hero
   height: 100vh
@@ -12,9 +13,16 @@
   font-size: 48px
   font-weight: 100
   margin: 0
+  max-width: 95vw
+  +media($breakpoint-sm)
+    font-size: 40px
 
 .hero__scroll
   font-size: 32px
   font-weight: 100
   opacity: 0
   animation: 0.8s fadeIn forwards 1.8s
+  text-align: center
+  max-width: 95vw
+  +media($breakpoint-sm)
+    font-size: 22px
