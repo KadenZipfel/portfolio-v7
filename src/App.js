@@ -92,6 +92,7 @@ class App extends Component {
               id="defi-accelerator"
               image={defiAccelerator}
               index={0}
+              link="http://www.defiaccelerator.io/"
             />
             <Project 
               header="Compound Data"
@@ -99,6 +100,7 @@ class App extends Component {
               id="compound-data" 
               image={compoundData}
               index={1}
+              link="https://kadenzipfel.github.io/compound-data/"
             />
             <Project 
               header="CSS Bundle"
@@ -106,6 +108,7 @@ class App extends Component {
               id="css-bundle" 
               image={cssBundle}
               index={2}
+              link="https://kadenzipfel.github.io/css-bundle/"
             />
             <About />
           </div>

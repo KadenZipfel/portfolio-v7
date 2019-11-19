@@ -17,12 +17,17 @@ class Project extends Component {
             {this.props.description}
           </p>
         </div>
-        {/* Change this to an image */}
-        <img 
-          className="project__image" 
-          src={this.props.image} 
-          alt={this.props.header} 
-        />
+        <a 
+          href={this.props.link} 
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img 
+            className="project__image" 
+            src={this.props.image} 
+            alt={this.props.header} 
+          />
+        </a>
         <div className="project__image-background"></div>
       </section>
     );
