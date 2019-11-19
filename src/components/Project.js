@@ -10,9 +10,16 @@ class Project extends Component {
         id={this.props.id}
       >
         <div className="project__heading">
-          <h2 className="project__header">
-            {this.props.header}
-          </h2>
+          <a 
+            href={this.props.link} 
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project__header"
+          >
+            <h2 className="project__header">
+              {this.props.header}
+            </h2>
+          </a>
           <p className="project__description">
             {this.props.description}
           </p>
