@@ -12,7 +12,9 @@ class Hero extends Component {
   }
 
   componentDidMount = () => {
-    this.typewriter();
+    setTimeout(() => {
+      this.typewriter();
+    }, 500);
   }
 
   typewriter = () => {
