@@ -14,7 +14,7 @@ class Project extends Component {
             href={this.props.link} 
             target="_blank"
             rel="noopener noreferrer"
-            class="project__header"
+            className="project__header"
           >
             <h2 className="project__header">
               {this.props.header}

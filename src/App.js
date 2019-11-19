@@ -65,7 +65,7 @@ class App extends Component {
     const elements = projectElements.concat(aboutElements);
 
     const width = window.innerWidth;
-    const range = (width / 4) * 3;
+    const range = (width / 3) * 2;
 
     wrapper.onscroll = () => {
       // Fade in elements when in range
