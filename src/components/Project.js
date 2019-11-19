@@ -6,7 +6,7 @@ class Project extends Component {
   render() {
     return (
       <section 
-        className={"project project--" + this.props.index} 
+        className={"project project--" + this.props.index}
         id={this.props.id}
       >
         <div className="project__heading">
@@ -18,7 +18,11 @@ class Project extends Component {
           </p>
         </div>
         {/* Change this to an image */}
-        <div className="project__image"></div>
+        <img 
+          className="project__image" 
+          src={this.props.image} 
+          alt={this.props.header} 
+        />
         <div className="project__image-background"></div>
       </section>
     );

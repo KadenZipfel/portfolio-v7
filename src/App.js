@@ -8,6 +8,10 @@ import About from './components/About';
 
 import './layout/config/_base.sass';
 
+import defiAccelerator from './images/defi-accelerator.PNG'
+import compoundData from './images/compound-data.PNG'
+import cssBundle from './images/css-bundle.PNG'
+
 class App extends Component {
   componentDidMount = () => {
     this.fadeInElements();
@@ -86,16 +90,22 @@ class App extends Component {
               header="Defi Accelerator"
               description="Marketing page for an Ethereum application." 
               id="defi-accelerator"
+              image={defiAccelerator}
+              index={0}
             />
             <Project 
               header="Compound Data"
               description="Displays API data from Compound.finance."
               id="compound-data" 
+              image={compoundData}
+              index={1}
             />
             <Project 
               header="CSS Bundle"
               description="A package for custom modular css components."
               id="css-bundle" 
+              image={cssBundle}
+              index={2}
             />
             <About />
           </div>

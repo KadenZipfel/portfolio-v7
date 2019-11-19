@@ -2,12 +2,14 @@ import React, {Component} from 'react';
 
 import '../layout/components/about.sass';
 
+import about from '../images/about.jpg';
+
 class About extends Component {
   render() {
     return (
       <section className="about" id="about">
         {/* Change this to an image */}
-        <div className="about__image"></div>
+        <img className="about__image" src={about} alt="About Me" />
         <div className="about__image-background"></div>
         <div className="about__text">
           <h2 className="about__header">
