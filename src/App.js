@@ -43,8 +43,6 @@ class App extends Component {
   }
 
   fadeInElements = () => {
-    const wrapper = document.querySelector('.outer-wrapper');
-
     // Get project elements
     const headers = Array.from(document.querySelectorAll('.project__heading'));
     const images = Array.from(document.querySelectorAll('.project__image'));
@@ -64,15 +62,11 @@ class App extends Component {
     // Concatenate elements
     const elements = projectElements.concat(aboutElements);
 
-    const width = window.innerWidth;
-    const range = (width / 3) * 2;
-
-    wrapper.onscroll = () => {
+    window.onscroll = () => {
       // Fade in elements when in range
       elements.forEach((element) => {
-        const left = element.getBoundingClientRect().left;
-        if(left < range) {
-          element.classList.add('active')
+        if(window.scrollY + (window.innerHeight / 4) * 3 > element.offsetTop) {
+          element.classList.add('active');
         }
       });
     }
@@ -83,36 +77,32 @@ class App extends Component {
       <div>
         <Nav handleNavClick={this.handleNavClick} />
         <ExpandedNav handleNavClick={this.handleNavClick} />
-        <div className="outer-wrapper">
-          <div className="inner-wrapper">
-            <Hero />
-            <Project 
-              header="Defi Accelerator"
-              description="Marketing page for an Ethereum application." 
-              id="defi-accelerator"
-              image={defiAccelerator}
-              index={0}
-              link="http://www.defiaccelerator.io/"
-            />
-            <Project 
-              header="Compound Data"
-              description="Displays API data from Compound.finance."
-              id="compound-data" 
-              image={compoundData}
-              index={1}
-              link="https://kadenzipfel.github.io/compound-data/"
-            />
-            <Project 
-              header="CSS Bundle"
-              description="A package for custom modular css components."
-              id="css-bundle" 
-              image={cssBundle}
-              index={2}
-              link="https://kadenzipfel.github.io/css-bundle/"
-            />
-            <About />
-          </div>
-        </div>
+        <Hero />
+        <Project 
+          header="Defi Accelerator"
+          description="Marketing page for an Ethereum application." 
+          id="defi-accelerator"
+          image={defiAccelerator}
+          index={0}
+          link="http://www.defiaccelerator.io/"
+        />
+        <Project 
+          header="Compound Data"
+          description="Displays API data from Compound.finance."
+          id="compound-data" 
+          image={compoundData}
+          index={1}
+          link="https://kadenzipfel.github.io/compound-data/"
+        />
+        <Project 
+          header="CSS Bundle"
+          description="A package for custom modular css components."
+          id="css-bundle" 
+          image={cssBundle}
+          index={2}
+          link="https://kadenzipfel.github.io/css-bundle/"
+        />
+        <About />
       </div>
     );
   }

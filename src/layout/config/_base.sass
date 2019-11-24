@@ -6,24 +6,5 @@
 body
   font-family: Roboto, sans-serif
   margin: 0
-
-.outer-wrapper
-  width: 100vh
-  height: 100vw
-  transform: rotate(-90deg) translateX(-100vh)
-  transform-origin: top left
-  overflow-y: scroll
+  scroll-behavior: smooth
   overflow-x: hidden
-  position: absolute
-  scrollbar-width: none
-  -ms-overflow-style: none
-
-::-webkit-scrollbar
-  display: none
-
-.inner-wrapper
-  transform: rotate(90deg) translateY(-100vh)
-  transform-origin: top left
-  display: flex
-  flex-direction: row
-  width: $hero-width + ($project-width * $project-amount) + $about-width
