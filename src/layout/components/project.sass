@@ -3,14 +3,18 @@
 @import '../config/_animations'
   
 .project
-  height: 100vh
+  min-height: 100vh
   width: 100vw
   padding: $project-padding
   position: relative
   z-index: -1
+  display: flex
+  flex-direction: column
 
 .project__heading
-  opacity: 0
+  opacity: 1
+  position: sticky
+  top: $project-padding
 
 .project__heading.active
   animation: 0.8s fadeLeft forwards
@@ -28,13 +32,9 @@
   width: 400px
 
 .project__image
-  position: absolute
-  bottom: $project-padding + 32px
-  right: $project-padding + 32px
-  width: 768px
-  height: 400px
-  background: #c4c4c4
-  opacity: 0
+  margin-top: 128px
+  width: calc(50vw - #{$project-padding})
+  opacity: 1
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25)
   +media($breakpoint-sm)
     width: 95vw
@@ -43,34 +43,37 @@
     right: 32px
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25)
 
+.project__image-link
+  align-self: flex-end
+
 .project__image.active
   animation: 0.8s fadeLeft forwards
 
-.project__image-background
-  position: absolute
-  bottom: $project-padding
-  right: $project-padding
-  width: 768px
-  height: 400px
-  background: #2b2b2b
-  z-index: -1
-  opacity: 0
-  +media($breakpoint-sm)
-    width: 95vw
-    height: 95vw
-    bottom: 32px
-    right: 32px
+// .project__image-background
+//   position: absolute
+//   bottom: $project-padding
+//   right: $project-padding
+//   width: calc(50vw - #{$project-padding})
+//   height: calc((50vw - #{$project-padding}) * 0.52)
+//   background: #2b2b2b
+//   z-index: -1
+//   opacity: 1
+//   +media($breakpoint-sm)
+//     width: 95vw
+//     height: 95vw
+//     bottom: 32px
+//     right: 32px
 
-.project__image-background.active
-  animation: 0.8s fadeLeft forwards 0.4s
+// .project__image-background.active
+//   animation: 0.8s fadeLeft forwards 0.4s
 
-.project--0
-  .project__image-background
-    background: #e2af4a
+// .project--0
+//   .project__image-background
+//     background: #e2af4a
 
-.project--1
-  .project__image-background
-    background: #00d395
-.project--2
-  .project__image-background
-    background: #3272b3
+// .project--1
+//   .project__image-background
+//     background: #00d395
+// .project--2
+//   .project__image-background
+//     background: #3272b3

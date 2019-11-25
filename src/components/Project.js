@@ -28,6 +28,7 @@ class Project extends Component {
           href={this.props.link} 
           target="_blank"
           rel="noopener noreferrer"
+          className="project__image-link"
         >
           <img 
             className="project__image" 
@@ -35,7 +36,7 @@ class Project extends Component {
             alt={this.props.header} 
           />
         </a>
-        <div className="project__image-background"></div>
+        {/* <div className="project__image-background"></div> */}
       </section>
     );
   }

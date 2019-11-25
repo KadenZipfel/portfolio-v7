@@ -14,7 +14,7 @@ import cssBundle from './images/css-bundle.PNG'
 
 class App extends Component {
   componentDidMount = () => {
-    this.fadeInElements();
+    // this.fadeInElements();
   }
 
   handleNavClick = () => {
