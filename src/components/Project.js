@@ -36,7 +36,6 @@ class Project extends Component {
             alt={this.props.header} 
           />
         </a>
-        {/* <div className="project__image-background"></div> */}
       </section>
     );
   }

@@ -15,11 +15,22 @@ import cssBundle from './images/css-bundle.png'
 class App extends Component {
   private readonly navMenu_: HTMLElement;
   private readonly expandedNav_: HTMLElement;
+  private readonly projectHeaders_: HTMLElement[];
+  private readonly projectImages_: HTMLElement[];
+  private readonly aboutText_: HTMLElement;
+  private readonly aboutImage_: HTMLElement;
 
   constructor(props: any) {
     super(props);
+
     this.navMenu_ = document.querySelector('.nav__menu');
     this.expandedNav_ = document.querySelector('.expanded-nav');
+
+    this.projectHeaders_ = Array.from(document.querySelectorAll('.project__heading'));
+    this.projectImages_ = Array.from(document.querySelectorAll('.project__image'));
+
+    this.aboutText_ = document.querySelector('.about__text');
+    this.aboutImage_ = document.querySelector('.about__image');
   }
 
   componentDidMount = () => {
@@ -48,24 +59,8 @@ class App extends Component {
   }
 
   fadeInElements = () => {
-    // Get project elements
-    const headers = Array.from(document.querySelectorAll('.project__heading'));
-    const images = Array.from(document.querySelectorAll('.project__image'));
-    const imageBackgrounds = 
-      Array.from(document.querySelectorAll('.project__image-background'));
-
-    const projectElements = headers.concat(images, imageBackgrounds);
-
-    // Get about elements
-    const text = document.querySelector('.about__text');
-    const image = document.querySelector('.about__image');
-    const imageBackground = 
-      document.querySelector('.about__image-background');
-
-    const aboutElements = [text, image, imageBackground];
-
     // Concatenate elements
-    const elements = projectElements.concat(aboutElements);
+    const elements = this.projectHeaders_.concat(this.projectImages_, this.aboutText_, this.aboutImage_);
 
     window.onscroll = () => {
       // Fade in elements when in range

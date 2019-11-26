@@ -10,7 +10,6 @@ class About extends Component {
       <section className="about" id="about">
         {/* Change this to an image */}
         <img className="about__image" src={about} alt="About Me" />
-        <div className="about__image-background"></div>
         <div className="about__text">
           <h2 className="about__header">
             About Me
