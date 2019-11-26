@@ -8,11 +8,20 @@ import About from './components/About';
 
 import './layout/config/_base.sass';
 
-import defiAccelerator from './images/defi-accelerator.PNG'
-import compoundData from './images/compound-data.PNG'
-import cssBundle from './images/css-bundle.PNG'
+import defiAccelerator from './images/defi-accelerator.png'
+import compoundData from './images/compound-data.png'
+import cssBundle from './images/css-bundle.png'
 
 class App extends Component {
+  private readonly navMenu_: HTMLElement;
+  private readonly expandedNav_: HTMLElement;
+
+  constructor(props: any) {
+    super(props);
+    this.navMenu_ = document.querySelector('.nav__menu');
+    this.expandedNav_ = document.querySelector('.expanded-nav');
+  }
+
   componentDidMount = () => {
     // this.fadeInElements();
   }
@@ -23,22 +32,18 @@ class App extends Component {
   }
 
   toggleNavMenu = () => {
-    const navMenu = document.querySelector('.nav__menu');
-
-    if(navMenu.classList.contains('active')) {
-      navMenu.classList.remove('active');
+    if(this.navMenu_.classList.contains('active')) {
+      this.navMenu_.classList.remove('active');
     } else {
-      navMenu.classList.add('active');
+      this.navMenu_.classList.add('active');
     }
   }
   
   toggleExpandedNav = () => {
-    const expandedNav = document.querySelector('.expanded-nav');
-
-    if(expandedNav.classList.contains('active')) {
-      expandedNav.classList.remove('active');
+    if(this.expandedNav_.classList.contains('active')) {
+      this.expandedNav_.classList.remove('active');
     } else {
-      expandedNav.classList.add('active');
+      this.expandedNav_.classList.add('active');
     }
   }
 

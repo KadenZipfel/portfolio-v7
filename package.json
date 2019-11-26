@@ -3,10 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@types/jest": "^24.0.23",
+    "@types/node": "^12.12.14",
+    "@types/react": "^16.9.13",
+    "@types/react-dom": "^16.9.4",
     "node-sass": "^4.13.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
-    "react-scripts": "3.2.0"
+    "react-scripts": "3.2.0",
+    "toolbox": "git+https://github.com/angusm/toolbox-v2.git#8ab6b3e5fb1ec602ffcb8f8ec3582ddf85eafaa3",
+    "typescript": "^3.7.2"
   },
   "scripts": {
     "start": "react-scripts start",
