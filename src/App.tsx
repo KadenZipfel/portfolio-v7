@@ -13,17 +13,15 @@ import compoundData from './images/compound-data.png'
 import cssBundle from './images/css-bundle.png'
 
 class App extends Component {
-  private readonly navMenu_: HTMLElement;
-  private readonly expandedNav_: HTMLElement;
-  private readonly projectHeaders_: HTMLElement[];
-  private readonly projectImages_: HTMLElement[];
-  private readonly aboutText_: HTMLElement;
-  private readonly aboutImage_: HTMLElement;
-  private readonly navLinks_: HTMLElement[];
+  private navMenu_: HTMLElement;
+  private expandedNav_: HTMLElement;
+  private projectHeaders_: HTMLElement[];
+  private projectImages_: HTMLElement[];
+  private aboutText_: HTMLElement;
+  private aboutImage_: HTMLElement;
+  private navLinks_: HTMLElement[];
 
-  constructor(props: any) {
-    super(props);
-
+  componentDidMount = (): void => {
     this.navMenu_ = document.querySelector('.nav__menu');
     this.expandedNav_ = document.querySelector('.expanded-nav');
 
@@ -34,9 +32,7 @@ class App extends Component {
     this.aboutImage_ = document.querySelector('.about__image');
 
     this.navLinks_ = Array.from(document.querySelectorAll('.expanded-nav__link'));
-  }
 
-  componentDidMount = (): void => {
     // this.fadeInElements();
     this.handleNavClick();
   }
