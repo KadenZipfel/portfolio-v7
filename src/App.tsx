@@ -33,16 +33,18 @@ class App extends Component {
     this.aboutImage_ = document.querySelector('.about__image');
   }
 
-  componentDidMount = () => {
+  componentDidMount = (): void => {
     // this.fadeInElements();
   }
 
-  handleNavClick = () => {
-    this.toggleNavMenu();
-    this.toggleExpandedNav();
+  handleNavClick = (): void => {
+    this.navMenu_.addEventListener('click', () => {
+      this.toggleNavMenu();
+      this.toggleExpandedNav();
+    });
   }
 
-  toggleNavMenu = () => {
+  toggleNavMenu = (): void => {
     if(this.navMenu_.classList.contains('active')) {
       this.navMenu_.classList.remove('active');
     } else {
@@ -50,7 +52,7 @@ class App extends Component {
     }
   }
   
-  toggleExpandedNav = () => {
+  toggleExpandedNav = (): void => {
     if(this.expandedNav_.classList.contains('active')) {
       this.expandedNav_.classList.remove('active');
     } else {
@@ -58,13 +60,13 @@ class App extends Component {
     }
   }
 
-  fadeInElements = () => {
+  fadeInElements = (): void => {
     // Concatenate elements
-    const elements = this.projectHeaders_.concat(this.projectImages_, this.aboutText_, this.aboutImage_);
+    const elements: HTMLElement[] = this.projectHeaders_.concat(this.projectImages_, this.aboutText_, this.aboutImage_);
 
-    window.onscroll = () => {
+    window.onscroll = (): void => {
       // Fade in elements when in range
-      elements.forEach((element) => {
+      elements.forEach((element: HTMLElement) => {
         if(window.scrollY + (window.innerHeight / 4) * 3 > element.offsetTop) {
           element.classList.add('active');
         }
@@ -75,7 +77,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Nav handleNavClick={this.handleNavClick} />
+        <Nav />
         <ExpandedNav handleNavClick={this.handleNavClick} />
         <Hero />
         <Project 

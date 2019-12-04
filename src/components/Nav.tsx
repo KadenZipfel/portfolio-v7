@@ -18,7 +18,7 @@ class Nav extends Component {
             alt="Github" 
           />
         </a>
-        <div className="nav__menu" onClick={this.props.handleNavClick}>
+        <div className="nav__menu">
           <div className="nav__bar nav__bar--1"></div>
           <div className="nav__bar nav__bar--2"></div>
           <div className="nav__bar nav__bar--3"></div>
