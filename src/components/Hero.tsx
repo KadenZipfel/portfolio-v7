@@ -2,7 +2,11 @@ import React, {Component} from 'react';
 
 import '../layout/components/hero.sass';
 
-class Hero extends Component {
+interface HeroState {
+  heroHeader: string;
+}
+
+class Hero extends Component<{}, HeroState> {
   constructor(props) {
     super(props);
     this.state = {
