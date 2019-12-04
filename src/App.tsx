@@ -19,6 +19,7 @@ class App extends Component {
   private readonly projectImages_: HTMLElement[];
   private readonly aboutText_: HTMLElement;
   private readonly aboutImage_: HTMLElement;
+  private readonly navLinks_: HTMLElement[];
 
   constructor(props: any) {
     super(props);
@@ -31,16 +32,25 @@ class App extends Component {
 
     this.aboutText_ = document.querySelector('.about__text');
     this.aboutImage_ = document.querySelector('.about__image');
+
+    this.navLinks_ = Array.from(document.querySelectorAll('.expanded-nav__link'));
   }
 
   componentDidMount = (): void => {
     // this.fadeInElements();
+    this.handleNavClick();
   }
 
   handleNavClick = (): void => {
     this.navMenu_.addEventListener('click', () => {
       this.toggleNavMenu();
       this.toggleExpandedNav();
+    });
+    this.navLinks_.forEach((link: HTMLElement) => {
+      link.addEventListener('click', () => {
+        this.toggleNavMenu();
+        this.toggleExpandedNav();
+      });
     });
   }
 
@@ -78,7 +88,7 @@ class App extends Component {
     return (
       <div>
         <Nav />
-        <ExpandedNav handleNavClick={this.handleNavClick} />
+        <ExpandedNav />
         <Hero />
         <Project 
           header="Defi Accelerator"
