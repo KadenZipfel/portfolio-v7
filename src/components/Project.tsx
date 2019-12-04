@@ -2,7 +2,16 @@ import React, {Component} from 'react';
 
 import '../layout/components/project.sass';
 
-class Project extends Component {
+interface ProjectProps {
+  index: number;
+  id: string;
+  link: string;
+  header: string;
+  description: string;
+  image: string;
+}
+
+class Project extends Component<ProjectProps> {
   render() {
     return (
       <section 
