@@ -10,7 +10,7 @@ import './layout/config/_base.sass';
 
 import defiAccelerator from './images/defi-accelerator.png'
 import compoundData from './images/compound-data.png'
-import cssBundle from './images/css-bundle.png'
+import ethereumLanding from './images/ethereum-landing.png'
 
 class App extends Component {
   private navMenu_: HTMLElement;
@@ -88,12 +88,12 @@ class App extends Component {
           link="https://kadenzipfel.github.io/compound-data/"
         />
         <Project 
-          header="CSS Bundle"
-          description="A package for custom modular css components."
-          id="css-bundle" 
-          image={cssBundle}
+          header="Ethereum"
+          description="Re-make of ethereum.org with night mode."
+          id="ethereum-landing" 
+          image={ethereumLanding}
           index={2}
-          link="https://kadenzipfel.github.io/css-bundle/"
+          link="https://kadenzipfel.github.io/ethereum-landing/"
         />
         <About />
       </div>
