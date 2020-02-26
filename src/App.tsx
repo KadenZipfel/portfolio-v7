@@ -90,7 +90,7 @@ class App extends Component {
         <Project 
           header="Ethereum"
           description="Re-make of ethereum.org with night mode."
-          id="ethereum-landing" 
+          id="ethereum" 
           image={ethereumLanding}
           index={2}
           link="https://kadenzipfel.github.io/ethereum-landing/"

@@ -17,8 +17,8 @@ class ExpandedNav extends Component {
           <a className="expanded-nav__link" href="#compound-data">
             Compound Data
           </a>
-          <a className="expanded-nav__link" href="#css-bundle">
-            CSS Bundle
+          <a className="expanded-nav__link" href="#ethereum">
+            Ethereum
           </a>
           <a className="expanded-nav__link" href="#about">
             About Me
