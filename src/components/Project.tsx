@@ -26,9 +26,6 @@ class Project extends Component<ProjectProps> {
         if(heading.getBoundingClientRect().top < 170) {
           heading.classList.add('active');
         }
-        if(heading.getBoundingClientRect().top > 170) {
-          heading.classList.remove('active');
-        }
       });
     }
   }
