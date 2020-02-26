@@ -44,16 +44,23 @@
   +media($breakpoint-lg)
     text-align: center
 
+  +media($breakpoint-sm)
+    font-size: 46px
+
 .project__description
   font-size: 32px
   font-weight: 100
   width: 400px
+  max-width: 90vw
 
   +media($breakpoint-lg)
     text-align: center
 
   +media($breakpoint-md)
     font-size: 24px
+
+  +media($breakpoint-sm)
+    font-size: 18px
 
 .project__image
   margin-top: 128px
@@ -67,6 +74,7 @@
 
   +media($breakpoint-sm)
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25)
+    width: 90vw
 
 .project__image-link
   align-self: flex-end

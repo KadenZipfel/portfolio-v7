@@ -13,6 +13,12 @@
     display: flex
     align-items: center
 
+  +media($breakpoint-md)
+    padding: 64px
+
+  +media($breakpoint-sm)
+    padding: 16px
+
 .about__image
   height: 600px
   width: 400px
@@ -44,6 +50,10 @@
     margin: auto
     text-align: center
 
+  +media($breakpoint-sm)
+    height: auto
+    width: auto
+
 .about__text.active
   animation: 0.8s fadeLeft forwards
 
@@ -52,9 +62,15 @@
   font-weight: 100
   margin: 0
 
+  +media($breakpoint-sm)
+    font-size: 46px
+
 .about__hr
   margin-bottom: 32px
 
 .about__paragraph
   font-size: 18px
   font-weight: 300
+
+  +media($breakpoint-sm)
+    font-size: 16px
