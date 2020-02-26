@@ -9,6 +9,10 @@
   position: relative
   z-index: -1
 
+  +media($breakpoint-lg)
+    display: flex
+    align-items: center
+
 .about__image
   height: 600px
   width: 400px
@@ -18,6 +22,9 @@
   top: calc(50% - 300px)
   opacity: 1
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25)
+
+  +media($breakpoint-lg)
+    display: none
 
 .about__image.active
   animation: 0.8s fadeLeft forwards
@@ -29,6 +36,13 @@
   height: 600px
   width: 400px
   opacity: 1
+
+  +media($breakpoint-lg)
+    position: relative
+    left: auto
+    top: auto
+    margin: auto
+    text-align: center
 
 .about__text.active
   animation: 0.8s fadeLeft forwards

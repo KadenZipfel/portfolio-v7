@@ -11,13 +11,25 @@
   display: flex
   flex-direction: column
 
+  +media($breakpoint-lg)
+    align-items: center
+    justify-content: center
+
 .project__heading
   opacity: 0
   position: sticky
   top: $project-padding
+  max-width: 95vw
+
+  +media($breakpoint-lg)
+    position: relative
+    margin-bottom: 64px
 
 .project__heading.active
   animation: 0.3s fadeLeft forwards
+
+  +media($breakpoint-lg)
+    animation: 0.3s fadeUp forwards
 
 .project__header
   font-size: 60px
@@ -26,25 +38,35 @@
   text-decoration: none
   color: black
 
+  +media($breakpoint-lg)
+    text-align: center
+
 .project__description
   font-size: 32px
   font-weight: 100
   width: 400px
 
+  +media($breakpoint-lg)
+    text-align: center
+
 .project__image
   margin-top: 128px
   width: calc(50vw - #{$project-padding})
+  max-width: 95vw
   opacity: 1
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25)
+
+  +media($breakpoint-lg)
+    width: 80vw
+
   +media($breakpoint-sm)
-    width: 95vw
-    height: 95vw
-    bottom: 64px
-    right: 32px
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25)
 
 .project__image-link
   align-self: flex-end
+
+  +media($breakpoint-lg)
+    align-self: center
 
 .project__image.active
   animation: 0.8s fadeLeft forwards
