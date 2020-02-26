@@ -33,7 +33,6 @@ class App extends Component {
 
     this.navLinks_ = Array.from(document.querySelectorAll('.expanded-nav__link'));
 
-    // this.fadeInElements();
     this.handleNavClick();
   }
 
@@ -63,20 +62,6 @@ class App extends Component {
       this.expandedNav_.classList.remove('active');
     } else {
       this.expandedNav_.classList.add('active');
-    }
-  }
-
-  fadeInElements = (): void => {
-    // Concatenate elements
-    const elements: HTMLElement[] = this.projectHeaders_.concat(this.projectImages_, this.aboutText_, this.aboutImage_);
-
-    window.onscroll = (): void => {
-      // Fade in elements when in range
-      elements.forEach((element: HTMLElement) => {
-        if(window.scrollY + (window.innerHeight / 4) * 3 > element.offsetTop) {
-          element.classList.add('active');
-        }
-      });
     }
   }
 

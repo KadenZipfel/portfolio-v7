@@ -12,13 +12,34 @@ interface ProjectProps {
 }
 
 class Project extends Component<ProjectProps> {
+  projectHeadings_: HTMLElement[];
+
+  componentDidMount = () => {
+    this.projectHeadings_ = Array.from(document.querySelectorAll('.project__heading'));
+
+    this.fadeHeadings();
+  }
+
+  fadeHeadings = () => {
+    window.onscroll = () => {
+      this.projectHeadings_.forEach((heading) => {
+        if(heading.getBoundingClientRect().top < 170) {
+          heading.classList.add('active');
+        }
+        if(heading.getBoundingClientRect().top > 170) {
+          heading.classList.remove('active');
+        }
+      });
+    }
+  }
+
   render() {
     return (
       <section 
         className={"project project--" + this.props.index}
         id={this.props.id}
       >
-        <div className="project__heading">
+        <div className={"project__heading project__heading--" + this.props.index}>
           <a 
             href={this.props.link} 
             target="_blank"
