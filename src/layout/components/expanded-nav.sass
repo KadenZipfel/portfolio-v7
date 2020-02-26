@@ -2,12 +2,13 @@
   
 .expanded-nav
   position: fixed
-  height: 100vh
-  width: 100vw
+  height: 0
+  width: 0
   display: flex
   align-items: center
   justify-content: center
   overflow: hidden
+  z-index: 3
 
 .expanded-nav__background
   position: absolute
@@ -19,9 +20,10 @@
   width: 1px
   border-radius: 50%
   transition: height 0.5s, width 0.5s
-  z-index: 2
 
 .expanded-nav.active
+  height: 100vh
+  width: 100vw
   .expanded-nav__background
     height: 6000px
     width: 6000px
