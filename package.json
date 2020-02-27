@@ -14,11 +14,14 @@
     "toolbox": "git+https://github.com/angusm/toolbox-v2.git#8ab6b3e5fb1ec602ffcb8f8ec3582ddf85eafaa3",
     "typescript": "^3.7.2"
   },
+  "homepage": "http://kadenzipfel.dev",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -34,5 +37,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^2.2.0"
   }
 }
