@@ -15,22 +15,11 @@ import ethereumLanding from './images/ethereum-landing.png'
 class App extends Component {
   private navMenu_: HTMLElement;
   private expandedNav_: HTMLElement;
-  private projectHeaders_: HTMLElement[];
-  private projectImages_: HTMLElement[];
-  private aboutText_: HTMLElement;
-  private aboutImage_: HTMLElement;
   private navLinks_: HTMLElement[];
 
   componentDidMount = (): void => {
     this.navMenu_ = document.querySelector('.nav__menu');
     this.expandedNav_ = document.querySelector('.expanded-nav');
-
-    this.projectHeaders_ = Array.from(document.querySelectorAll('.project__heading'));
-    this.projectImages_ = Array.from(document.querySelectorAll('.project__image'));
-
-    this.aboutText_ = document.querySelector('.about__text');
-    this.aboutImage_ = document.querySelector('.about__image');
-
     this.navLinks_ = Array.from(document.querySelectorAll('.expanded-nav__link'));
 
     this.handleNavClick();
