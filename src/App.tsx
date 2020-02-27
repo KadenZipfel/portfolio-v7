@@ -77,7 +77,7 @@ class App extends Component {
           id="defi-accelerator"
           image={defiAccelerator}
           index={0}
-          link="http://www.defiaccelerator.io/"
+          link="https://github.com/KadenZipfel/defi-accelerator-io"
         />
         <Project 
           header="Compound Data"
@@ -85,7 +85,7 @@ class App extends Component {
           id="compound-data" 
           image={compoundData}
           index={1}
-          link="https://kadenzipfel.github.io/compound-data/"
+          link="https://github.com/KadenZipfel/compound-data"
         />
         <Project 
           header="Ethereum"
@@ -93,7 +93,7 @@ class App extends Component {
           id="ethereum" 
           image={ethereumLanding}
           index={2}
-          link="https://kadenzipfel.github.io/ethereum-landing/"
+          link="https://github.com/KadenZipfel/ethereum-landing"
         />
         <About />
       </div>
