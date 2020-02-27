@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d3a0187b.chunk.css",
+    "main.js": "/static/js/main.77d17a0d.chunk.js",
+    "main.js.map": "/static/js/main.77d17a0d.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.dfbb36bd.js",
+    "runtime-main.js.map": "/static/js/runtime-main.dfbb36bd.js.map",
+    "static/js/2.730abb1d.chunk.js": "/static/js/2.730abb1d.chunk.js",
+    "static/js/2.730abb1d.chunk.js.map": "/static/js/2.730abb1d.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.f2d92b23e80f554c73253fc74aa3f899.js": "/precache-manifest.f2d92b23e80f554c73253fc74aa3f899.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.d3a0187b.chunk.css.map": "/static/css/main.d3a0187b.chunk.css.map",
+    "static/media/compound-data.png": "/static/media/compound-data.d84e9d17.png",
+    "static/media/defi-accelerator.png": "/static/media/defi-accelerator.2eeff055.png",
+    "static/media/ethereum-landing.png": "/static/media/ethereum-landing.c352dbea.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.dfbb36bd.js",
+    "static/js/2.730abb1d.chunk.js",
+    "static/css/main.d3a0187b.chunk.css",
+    "static/js/main.77d17a0d.chunk.js"
+  ]
+}
