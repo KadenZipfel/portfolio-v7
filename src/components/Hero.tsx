@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import {ScrollScene} from 'scrollscene';
+import {TimelineMax} from 'gsap';
 
 import '../layout/components/hero.sass';
 
@@ -7,6 +9,8 @@ interface HeroState {
 }
 
 class Hero extends Component<{}, HeroState> {
+  private timeline3_: TimelineMax;
+
   constructor(props) {
     super(props);
     this.state = {
@@ -14,13 +18,34 @@ class Hero extends Component<{}, HeroState> {
     }
   }
 
-  componentDidMount = () => {
+  componentDidMount = (): void => {
+    this.timeline3_ = new TimelineMax({onUpdate: this.updatePercentage, paused: true});
+    this.tweenHero();
+
     setTimeout(() => {
       this.typewriter();
     }, 500);
   }
 
-  typewriter = () => {
+  tweenHero = (): void => {
+    this.timeline3_.fromTo('.hero__heading', 1, {opacity: 1, scale: 1}, {opacity: 0, scale: 0});
+
+    new ScrollScene({
+      triggerElement: '.hero',
+      triggerHook: 'onLeave',
+      duration: '100%',
+      gsap: {
+        timeline: this.timeline3_
+      }
+    });
+  }
+
+  updatePercentage = (): void => {
+    this.timeline3_.progress();
+    console.log(this.timeline3_.progress());
+  }
+
+  typewriter = (): void => {
     const header = "Hi, I'm Kaden.";
 
     let headerSentence = '';
@@ -39,12 +64,14 @@ class Hero extends Component<{}, HeroState> {
   render() {
     return (
       <section className="hero" id="home">
-        <h1 className="hero__header">
-          {this.state.heroHeader}
-        </h1>
-        <p className="hero__scroll">
-          Scroll to see some of my work.
-        </p>
+        <div className="hero__heading">
+          <h1 className="hero__header">
+            {this.state.heroHeader}
+          </h1>
+          <p className="hero__scroll">
+            Scroll to see some of my work.
+          </p>
+        </div>
       </section>
     );
   }
