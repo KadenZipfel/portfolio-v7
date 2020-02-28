@@ -18,14 +18,21 @@ class Project extends Component<ProjectProps> {
   private timeline0_: TimelineMax;
   private timeline1_: TimelineMax;
   private timeline2_: TimelineMax;
+  private timeline3_: TimelineMax;
+  private timeline4_: TimelineMax;
+  private timeline5_: TimelineMax;
 
   componentDidMount = (): void => {
     this.projectHeadings_ = Array.from(document.querySelectorAll('.project__heading'));
     this.timeline0_ = new TimelineMax({onUpdate: this.updatePercentage, paused: true});
     this.timeline1_ = new TimelineMax({onUpdate: this.updatePercentage, paused: true});
     this.timeline2_ = new TimelineMax({onUpdate: this.updatePercentage, paused: true});
+    this.timeline3_ = new TimelineMax({onUpdate: this.updatePercentage, paused: true});
+    this.timeline4_ = new TimelineMax({onUpdate: this.updatePercentage, paused: true});
+    this.timeline5_ = new TimelineMax({onUpdate: this.updatePercentage, paused: true});
 
     this.tweenHeadings();
+    this.tweenImages();
   }
 
   tweenHeadings = (): void => {
@@ -63,6 +70,41 @@ class Project extends Component<ProjectProps> {
     });
   }
 
+  tweenImages = (): void => {
+    this.timeline3_.fromTo('.project__image--0', 1, {opacity: 0}, {opacity: 1});
+
+    new ScrollScene({
+      triggerElement: '.project--0',
+      triggerHook: 'onLeave',
+      duration: '40%',
+      gsap: {
+        timeline: this.timeline3_
+      }
+    });
+
+    this.timeline4_.fromTo('.project__image--1', 1, {opacity: 0}, {opacity: 1});
+
+    new ScrollScene({
+      triggerElement: '.project--1',
+      triggerHook: 'onLeave',
+      duration: '40%',
+      gsap: {
+        timeline: this.timeline4_
+      }
+    });
+
+    this.timeline5_.fromTo('.project__image--2', 1, {opacity: 0}, {opacity: 1});
+
+    new ScrollScene({
+      triggerElement: '.project--2',
+      triggerHook: 'onLeave',
+      duration: '40%',
+      gsap: {
+        timeline: this.timeline5_
+      }
+    });
+  } 
+
   updatePercentage = (): void => {
     this.timeline0_.progress();
     console.log(this.timeline0_.progress());
@@ -71,7 +113,7 @@ class Project extends Component<ProjectProps> {
     this.timeline2_.progress();
     console.log(this.timeline2_.progress());
   }
-  
+
   render() {
     return (
       <section 
@@ -100,7 +142,7 @@ class Project extends Component<ProjectProps> {
           className="project__image-link"
         >
           <img 
-            className="project__image" 
+            className={"project__image project__image--" + this.props.index} 
             src={this.props.image} 
             alt={this.props.header} 
           />

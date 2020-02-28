@@ -9,7 +9,7 @@ interface HeroState {
 }
 
 class Hero extends Component<{}, HeroState> {
-  private timeline3_: TimelineMax;
+  private timeline6_: TimelineMax;
 
   constructor(props) {
     super(props);
@@ -19,7 +19,7 @@ class Hero extends Component<{}, HeroState> {
   }
 
   componentDidMount = (): void => {
-    this.timeline3_ = new TimelineMax({onUpdate: this.updatePercentage, paused: true});
+    this.timeline6_ = new TimelineMax({onUpdate: this.updatePercentage, paused: true});
     this.tweenHero();
 
     setTimeout(() => {
@@ -28,21 +28,21 @@ class Hero extends Component<{}, HeroState> {
   }
 
   tweenHero = (): void => {
-    this.timeline3_.fromTo('.hero__heading', 1, {opacity: 1, scale: 1}, {opacity: 0, scale: 0});
+    this.timeline6_.fromTo('.hero__heading', 1, {opacity: 1, scale: 1}, {opacity: 0, scale: 0});
 
     new ScrollScene({
       triggerElement: '.hero',
       triggerHook: 'onLeave',
       duration: '100%',
       gsap: {
-        timeline: this.timeline3_
+        timeline: this.timeline6_
       }
     });
   }
 
   updatePercentage = (): void => {
-    this.timeline3_.progress();
-    console.log(this.timeline3_.progress());
+    this.timeline6_.progress();
+    console.log(this.timeline6_.progress());
   }
 
   typewriter = (): void => {
