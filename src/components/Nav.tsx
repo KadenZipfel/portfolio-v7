@@ -8,7 +8,7 @@ class Nav extends Component {
     return (
       <nav className="nav">
         <a 
-          href="https://github.com/KadenZipfel" 
+          href="https://github.com/KadenZipfel/portfolio-v7" 
           target="_blank" 
           rel="noopener noreferrer"
         >
