@@ -46,7 +46,7 @@ class Project extends Component<ProjectProps> {
       new ScrollScene({
         triggerElement: `.project--${i}`,
         triggerHook: 'onLeave',
-        duration: '40%',
+        duration: '60%',
         gsap: {
           timeline: this.timelines_[i]
         }
@@ -61,7 +61,7 @@ class Project extends Component<ProjectProps> {
       new ScrollScene({
         triggerElement: `.project--${i}`,
         triggerHook: 'onLeave',
-        duration: '40%',
+        duration: '60%',
         gsap: {
           timeline: this.timelines_[i + 3]
         }
