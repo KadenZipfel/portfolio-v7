@@ -19,7 +19,7 @@ class Hero extends Component<{}, HeroState> {
   }
 
   componentDidMount = (): void => {
-    this.timeline6_ = new TimelineMax({onUpdate: this.updatePercentage, paused: true});
+    this.timeline6_ = new TimelineMax({paused: true});
     this.tweenHero();
 
     setTimeout(() => {
@@ -38,11 +38,6 @@ class Hero extends Component<{}, HeroState> {
         timeline: this.timeline6_
       }
     });
-  }
-
-  updatePercentage = (): void => {
-    this.timeline6_.progress();
-    console.log(this.timeline6_.progress());
   }
 
   typewriter = (): void => {
