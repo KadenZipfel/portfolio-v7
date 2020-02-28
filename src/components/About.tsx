@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import "../utils/installGsap.js";
 import {ScrollScene} from 'scrollscene';
 import {TimelineMax} from 'gsap';
 
