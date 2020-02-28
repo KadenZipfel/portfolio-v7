@@ -28,7 +28,7 @@ class Hero extends Component<{}, HeroState> {
   }
 
   tweenHero = (): void => {
-    this.timeline6_.fromTo('.hero__heading', 1, {opacity: 1, scale: 1}, {opacity: 0, scale: 0});
+    this.timeline6_.fromTo('.hero__heading', 1, {opacity: 1}, {opacity: 0});
 
     new ScrollScene({
       triggerElement: '.hero',

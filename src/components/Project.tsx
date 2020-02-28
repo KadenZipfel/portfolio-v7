@@ -66,16 +66,6 @@ class Project extends Component<ProjectProps> {
 
     this.tweenHeadings();
     this.tweenImages();
-
-    window.addEventListener('resize', this.manageResize);
-  }
-
-  manageResize = async (): Promise<void> => {
-    if(window.innerWidth < 1024) {
-      this.project_.classList.add('protect');
-    } else {
-      this.project_.classList.remove('protect');
-    }
   }
 
   tweenHeadings = (): void => {
