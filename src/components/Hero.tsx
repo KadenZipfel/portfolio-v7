@@ -34,7 +34,7 @@ class Hero extends Component<{}, HeroState> {
     new ScrollScene({
       triggerElement: '.hero',
       triggerHook: 'onLeave',
-      duration: '100%',
+      duration: '50%',
       gsap: {
         timeline: this.timeline6_
       }
