@@ -3,6 +3,8 @@ import "../utils/installGsap.js";
 import {ScrollScene} from 'scrollscene';
 import {TimelineMax} from 'gsap';
 
+import github from '../images/github.png';
+
 import '../layout/components/project.sass';
 
 interface ProjectProps {
@@ -12,6 +14,7 @@ interface ProjectProps {
   header: string;
   description: string;
   image: string;
+  githubLink: string;
 }
 
 class Project extends Component<ProjectProps> {
@@ -145,6 +148,9 @@ class Project extends Component<ProjectProps> {
           <p className="project__description">
             {this.props.description}
           </p>
+          <a href={this.props.githubLink} className="project__github-link">
+            <img src={github} alt="Github" className="project__github" />
+          </a>
         </div>
         <a 
           href={this.props.link} 
