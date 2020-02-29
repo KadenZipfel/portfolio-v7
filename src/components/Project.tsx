@@ -148,7 +148,12 @@ class Project extends Component<ProjectProps> {
           <p className="project__description">
             {this.props.description}
           </p>
-          <a href={this.props.githubLink} className="project__github-link">
+          <a 
+            href={this.props.githubLink}
+            target="_blank"
+            rel="noopener noreferrer" 
+            className="project__github-link"
+          >
             <img src={github} alt="Github" className="project__github" />
           </a>
         </div>
