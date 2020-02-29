@@ -79,8 +79,8 @@ class Project extends Component<ProjectProps> {
       new ScrollScene({
         triggerElement: `.project--${i}`,
         triggerHook: 'onLeave',
-        duration: '60%',
-        breakpoints: {0: false, 1024: true},
+        duration: '40%',
+        breakpoints: {0: false, 1025: true},
         gsap: {
           timeline: this.timelines_[i]
         }
@@ -91,10 +91,10 @@ class Project extends Component<ProjectProps> {
       new ScrollScene({
         triggerElement: `.project--${i}`,
         triggerHook: 'onCenter',
-        duration: '50%',
-        breakpoints: {0: true, 1024: false},
+        duration: '40%',
+        breakpoints: {0: true, 1025: false},
         gsap: {
-          timeline: this.timelines_[i + 3]
+          timeline: this.timelines_[i + this.projectHeadings_.length]
         }
       });
     });
@@ -107,10 +107,10 @@ class Project extends Component<ProjectProps> {
       new ScrollScene({
         triggerElement: `.project--${i}`,
         triggerHook: 'onLeave',
-        duration: '60%',
-        breakpoints: {0: false, 1024: true},
+        duration: '40%',
+        breakpoints: {0: false, 1025: true},
         gsap: {
-          timeline: this.timelines_[i + 6]
+          timeline: this.timelines_[i + this.projectHeadings_.length * 2]
         }
       });
 
@@ -119,10 +119,10 @@ class Project extends Component<ProjectProps> {
       new ScrollScene({
         triggerElement: `.project--${i}`,
         triggerHook: 'onCenter',
-        duration: '50%',
-        breakpoints: {0: true, 1024: false},
+        duration: '40%',
+        breakpoints: {0: true, 1025: false},
         gsap: {
-          timeline: this.timelines_[i + 9]
+          timeline: this.timelines_[i + this.projectHeadings_.length * 3]
         }
       });
     });
