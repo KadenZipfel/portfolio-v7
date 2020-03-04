@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.53fb983f.chunk.css",
-    "main.js": "/static/js/main.c51e1fdd.chunk.js",
-    "main.js.map": "/static/js/main.c51e1fdd.chunk.js.map",
+    "main.js": "/static/js/main.fbe78514.chunk.js",
+    "main.js.map": "/static/js/main.fbe78514.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.dfbb36bd.js",
     "runtime-main.js.map": "/static/js/runtime-main.dfbb36bd.js.map",
     "static/js/2.df618f70.chunk.js": "/static/js/2.df618f70.chunk.js",
     "static/js/2.df618f70.chunk.js.map": "/static/js/2.df618f70.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.3d372597b9a473ffbeb1616337251bef.js": "/precache-manifest.3d372597b9a473ffbeb1616337251bef.js",
+    "precache-manifest.bf4d514b313403d41cd1cace2af73eaa.js": "/precache-manifest.bf4d514b313403d41cd1cace2af73eaa.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.53fb983f.chunk.css.map": "/static/css/main.53fb983f.chunk.css.map",
-    "static/media/compound-data.png": "/static/media/compound-data.d84e9d17.png",
+    "static/media/compound-gov.png": "/static/media/compound-gov.d4d78504.png",
     "static/media/defi-accelerator.png": "/static/media/defi-accelerator.2eeff055.png",
     "static/media/ethereum-landing.png": "/static/media/ethereum-landing.c352dbea.png"
   },
@@ -19,6 +19,6 @@
     "static/js/runtime-main.dfbb36bd.js",
     "static/js/2.df618f70.chunk.js",
     "static/css/main.53fb983f.chunk.css",
-    "static/js/main.c51e1fdd.chunk.js"
+    "static/js/main.fbe78514.chunk.js"
   ]
 }
