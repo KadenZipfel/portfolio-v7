@@ -9,7 +9,7 @@ import About from './components/About';
 import './layout/config/_base.sass';
 
 import defiAccelerator from './images/defi-accelerator.png'
-import compoundData from './images/compound-data.png'
+import compoundGov from './images/compound-gov.png'
 import ethereumLanding from './images/ethereum-landing.png'
 
 class App extends Component {
@@ -67,16 +67,16 @@ class App extends Component {
           image={defiAccelerator}
           index={0}
           githubLink="https://github.com/KadenZipfel/defi-accelerator-io"
-          link="http://www.defiaccelerator.io/"
+          link="https://kadenzipfel.github.io/defi-accelerator-io/"
         />
         <Project 
-          header="Compound Data"
-          description="Displays API data from Compound.finance."
+          header="Compound Governance"
+          description="A user interface for Compound's governance system."
           id="compound-data" 
-          image={compoundData}
+          image={compoundGov}
           index={1}
-          githubLink="https://github.com/KadenZipfel/compound-data"
-          link="https://kadenzipfel.github.io/compound-data/"
+          githubLink="https://github.com/KadenZipfel/compound-governance"
+          link="https://kadenzipfel.github.io/compound-governance/"
         />
         <Project 
           header="Ethereum"
